@@ -31,6 +31,16 @@ public class Configuration {
             SETTINGS_CONFIG.set("Database.Password", "root");
             saveSettingsConfig();
         }
+        
+        if (!SETTINGS_CONFIG.isConfigurationSection("ArenasPath")) {
+            SETTINGS_CONFIG.set("ArenasPath", "YourArenasFolder");
+            saveSettingsConfig();
+        }
+
+        if (!SETTINGS_CONFIG.isConfigurationSection("Spawn")) {
+            SETTINGS_CONFIG.set("Spawn", "0 0 100 0 0");
+            saveSettingsConfig();
+        }
     }
 
     public YamlConfiguration getSettingsConfig() {
